@@ -1,0 +1,265 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply overflow-x-hidden font-primary bg-[#eff1f4];
+}
+
+main {
+  @apply min-h-screen
+}
+
+.custom-container {
+  @apply px-4 lg:px-10 overflow-x-hidden;
+}
+
+.section-heading {
+  @apply font-semibold text-xl lg:text-2xl text-gray;
+}
+
+.section-padding {
+  @apply py-8;
+}
+
+.section-margin {
+  @apply my-8;
+}
+
+.ellipsis-text {
+  @apply line-clamp-3
+}
+
+/* Menus */
+.primary-menu li a {
+  @apply relative mx-4 xl:mx-8 text-white hover:text-primary text-lg font-semibold;
+}
+
+.primary-menu li a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -29px;
+  height: 3px;
+  width: 0;
+  background-color: transparent;
+  z-index: 999;
+  transition: all .3s;
+}
+
+.primary-menu li a:hover::before,
+.primary-menu li a.active_color::before {
+  background-color: #F8FF29;
+  width: 100%;
+}
+
+.primary-menu li a.active_color {
+  @apply text-primary;
+}
+
+.primary-menu li a.active_color::before {
+  @apply bg-primary;
+}
+
+
+.floating_active_menu p {
+  @apply !text-primary
+}
+
+/*Custom radio button*/
+.custom-radio-button + label {
+  @apply block border border-[#D8DCE3] py-3 px-2 w-full text-center text-sm text-black font-medium cursor-pointer capitalize;
+}
+.custom-radio-button:checked + label {
+  @apply bg-[#D8DCE3];
+}
+
+/*Custom radio button*/
+.custom-radio-btn + label {
+  @apply flex justify-between items-center gap-2 py-3 px-4 rounded-xl bg-[#383435] cursor-pointer;
+}
+
+.custom-radio-btn + label img {
+  @apply w-10 xl:w-14
+}
+
+.custom-radio-btn + label p {
+  @apply text-[#383435] font-bold text-base lg:text-lg;
+}
+.custom-radio-btn + label i {
+  @apply text-white text-[34px] lg:text-[40px];
+}
+.custom-radio-btn:checked + label i {
+  @apply text-primary;
+}
+
+/* slick slider */
+.banner-slider {
+  @apply pb-5 overflow-x-auto whitespace-nowrap flex gap-5 cursor-grab;
+}
+
+.slider-item {
+  @apply snap-center snap-always shrink-0;
+}
+
+.banner-slider .slick-slide {
+  @apply mx-2;
+}
+
+/* Banner slider scrollbar styling */
+.banner-slider::-webkit-scrollbar {
+  @apply w-full h-1.5
+}
+
+.banner-slider::-webkit-scrollbar-track {
+  @apply bg-[#CDCDCD] rounded-[10px]
+}
+
+.banner-slider::-webkit-scrollbar-thumb {
+  @apply bg-primary/50 rounded-[10px]
+}
+
+/* .progress-bar-container {
+  @apply relative w-full h-1.5 bg-[#CDCDCD];
+}
+
+.progress-bar {
+  @apply absolute top-0 left-0 h-full bg-primary transition-all;
+} */
+
+/*News*/
+.news-card-big {
+  @apply bg-secondary rounded-xl;
+}
+
+.news-big-heading {
+  @apply mb-3 text-lg lg:text-xl font-semibold text-white;
+}
+
+.news-card-big a {
+  @apply cursor-pointer
+}
+
+.news-tag {
+  @apply text-base 2xl:text-xl text-white;
+}
+
+.news-card-small {
+  @apply bg-secondary rounded-xl flex items-center gap-4 2xl:gap-6 px-4 py-3 md:min-h-[140px] xl:min-h-[180px];
+}
+
+.news-card-small a {
+  @apply cursor-pointer
+}
+
+.news-card-small-content {
+  @apply grow flex flex-col justify-between
+}
+
+.news-card-small .small-img {
+  @apply w-[94px] lg:w-[100px] 2xl:w-[193px] h-[96px] xl:h-[110px] 2xl:h-auto shrink-0;
+}
+
+.news-card-small .small-img img {
+  @apply object-cover h-full w-full rounded-xl;
+}
+
+.news-small-heading {
+  @apply mb-3 text-[15px] 2xl:text-xl font-medium text-primary;
+}
+
+.news-card-small .news-tag {
+  @apply text-sm lg:text-base text-white;
+}
+
+.mobile-big-img {
+  @apply h-[505px] lg:h-auto;
+}
+
+.mobile-big-img img {
+  @apply object-cover;
+}
+
+/*border-btn-block*/
+.border-btn-block {
+  @apply hidden lg:flex gap-6;
+}
+
+.border-btn {
+  @apply inline-block py-2 px-4 min-w-[120px] border border-secondary rounded-[20px] text-center font-semibold text-[#4B5768];
+}
+
+/* Accordion */
+.accordion .a-container {
+  @apply bg-[#423E3F] rounded-lg;
+}
+.accordion .a-container .a-btn {
+  @apply relative w-full text-white font-medium cursor-pointer transition-all py-4 px-4 lg:px-6 flex justify-between items-center;
+}
+
+.accordion .a-container .a-btn .title {
+  @apply text-base lg:text-xl font-semibold;
+}
+
+.accordion .a-container .a-btn .arrow {
+  @apply -mt-2.5 inline-block w-3 h-3 text-primary rotate-45 border-r-2 border-b-2 border-solid;
+}
+
+.accordion .a-container .a-panel {
+  @apply w-full text-white text-[15px] leading-[22px] lg:text-xl transition-all opacity-0 h-auto max-h-0 overflow-hidden px-4 lg:px-6;
+}
+
+.accordion .a-container.active .a-btn .arrow {
+  @apply rotate-[227deg] -mt-0 lg:-mt-2.5;
+}
+
+.accordion .a-container.active .a-panel {
+  @apply opacity-100 max-h-[500px] pb-4;
+}
+
+.accordion .a-container.active .a-panel p {
+  @apply pt-1 first:pt-0;
+}
+
+/* Image carousel  */
+.image-carousel .slick-slide {
+  @apply mr-6
+}
+.image-carousel .slick-next:before,
+.image-carousel .slick-prev:before {
+  @apply text-[#383435] text-[28px] lg:text-[32px]
+}
+.image-carousel .slick-next,
+.image-carousel .slick-prev {
+  @apply -top-9 right-0 left-auto
+}
+.image-carousel .slick-prev {
+  @apply right-10
+}
+
+
+/*News details*/
+.news-content p {
+  @apply text-xs lg:text-sm text-textGray mt-4
+}
+
+.news-content img {
+  @apply rounded-xl
+}
+
+/* Video Modal */
+::backdrop {
+  @apply bg-secondary/95
+}
+
+.video-modal dialog iframe {
+  @apply h-[300px] lg:h-[500px]
+}
+
+.video-modal dialog {
+  @apply fixed
+}
+
+.add-height img {
+  @apply h-[250px]
+}
