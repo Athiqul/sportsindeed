@@ -526,6 +526,8 @@ $config['time_reference'] = 'local';
 |
 */
 $config['rewrite_short_tags'] = FALSE;
+$config['log_threshold'] = 0; // Only Errors. Set to 0 to disable logging.
+
 
 /*
 |--------------------------------------------------------------------------

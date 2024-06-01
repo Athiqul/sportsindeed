@@ -25,7 +25,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
 
-  <body>
+  <body class="bg-[#FFFFFF]">
     <!-- Header -->
     <header class="bg-[#980000]">
       <div class="custom-container !overflow-visible">
@@ -113,7 +113,7 @@
       </div>
 
       <!-- Only mobile device section -->
-      <div class="lg:hidden bg-[#2C2C2C] py-4">
+      <div class="lg:hidden bg-[#980000] py-4">
         <div class="custom-container">
           <div class="flex items-center gap-7">
             <div class="w-7 h-7 bg-[#423E3F] rounded-full grid place-content-center">
